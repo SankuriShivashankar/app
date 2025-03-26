@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Doctors</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .doctors-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .doctor-card {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 20px;
+            width: 280px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        .doctor-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .doctor-card h3 {
+            margin-top: 10px;
+            font-size: 1.4rem;
+        }
+        .call-button {
+            text-decoration: none;
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .call-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav-header">
+        <div class="logo-container">Doctor Ai</div>
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="#" class="nav-item">About</a>
+            <a href="#" class="nav-item">Services</a>
+            <a href="#" class="nav-item">Donate</a>
+        </nav>
+    </div>
+
+    <main class="container">
+        <h1>Doctors Available for Consultation</h1>
+        <div class="doctors-list">
+            <div class="doctor-card">
+                <img src="assests/a300f3c1-ee3a-4036-9b56-2b0f9fc827b7.jpeg" alt="Dr. Ramesh Kumar">
+                <h3>Dr. Ramesh Kumar</h3>
+                <p>General Physician — 15 Years Experience</p>
+                <button class="call-button" onclick="startCall('RameshKumar')">Start Video Call</button>
+            </div>
+            <div class="doctor-card">
+                <img src="assests/0e10b4eb-eed9-4206-ae3f-599666a3ffb2.jpeg" alt="Dr. Anjali Verma">
+                <h3>Dr. Anjali Verma</h3>
+                <p>Dermatologist — 10 Years Experience</p>
+                <button class="call-button" onclick="startCall('AnjaliVerma')">Start Video Call</button>
+            </div>
+            <div class="doctor-card">
+                <img src="assests/1a3b5008-409c-4e0b-8a63-8e4fc006169a.jpeg" alt="Dr. Rahul Singh">
+                <h3>Dr. Rahul Singh</h3>
+                <p>Pediatrician — 8 Years Experience</p>
+                <button class="call-button" onclick="startCall('RahulSingh')">Start Video Call</button>
+            </div>
+            <div class="doctor-card">
+                <img src="assests/5e0f7909-328b-4fd8-a45f-183da524b7ed.jpeg" alt="Dr. Anirudh Rao">
+                <h3>Dr. Anirudh Rao</h3>
+                <p>Cardiologist — 12 Years Experience</p>
+                <a href="#" onclick="startCall('Dr_Anirudh_Rao')" class="call-button">Start Video Call</a>
+            </div>
+            <div class="doctor-card">
+                <img src="assests/7a147421-f956-48ff-bbf3-8af7089973ee.jpeg" alt="Dr. Priya Sharma">
+                <h3>Dr. Priya Sharma</h3>
+                <p>Neurologist — 9 Years Experience</p>
+                <a href="#" onclick="startCall('Dr_Priya_Sharma')" class="call-button">Start Video Call</a>
+            </div>
+            <div class="doctor-card">
+                <img src="assests/2bf61af4-279c-4fe9-bb82-629ac4572fff.jpeg"" alt="Dr. Karthik Menon">
+                <h3>Dr. Karthik Menon</h3>
+                <p>Orthopedic Surgeon — 18 Years Experience</p>
+                <a href="#" onclick="startCall('Dr_Karthik_Menon')" class="call-button">Start Video Call</a>
+            </div>
+            <div class="doctor-card">
+                <img src="assests/dd646019-43d0-4ae6-8509-13f84625d997.jpeg"alt="Dr. Neha Desai">
+                <h3>Dr. Neha Desai</h3>
+                <p>Gynecologist — 7 Years Experience</p>
+                <a href="#" onclick="startCall('Dr_Neha_Desai')" class="call-button">Start Video Call</a>
+            </div>
+            <div class="doctor-card">
+                <img src="assests/af28f39a-b2c4-45cf-87a8-e833e67a84a4.jpeg" alt="Dr. Shalini Joshi">
+                <h3>Dr. Shalini Joshi</h3>
+                <p>Psychiatrist — 10 Years Experience</p>
+                <a href="#" onclick="startCall('Dr_Shalini_Joshi')" class="call-button">Start Video Call</a>
+            </div>
+            
+        </div>
+    </main>
+    
+    <script>
+        function startCall(doctorName) {
+            const roomName = `${doctorName}-${Date.now()}`;
+            const meetURL = `https://meet.jit.si/${roomName}`;
+            window.open(meetURL, '_blank');
+        }
+    </script>
+
+</body>
+</html>

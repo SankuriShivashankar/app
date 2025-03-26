@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="voice.css">
+</head>
+
+<body>
+
+    <section class="voice-feature-section">
+        <h2>Voice-Based Consultation in Telugu & Hindi</h2>
+        <p>We have introduced a voice assistant that makes it easier for rural users:</p>
+        <ul>
+            <li><strong>Add a mic button:</strong> Click the mic icon and speak your health issue in Telugu or
+                Hindi.</li>
+            <li><strong>Speech Recognition:</strong> Your voice will be converted into text and shown on screen.
+            </li>
+            <li><strong>Instant AI Analysis:</strong> We will suggest the best doctor or solution based on your
+                symptoms.</li>
+            <li><strong>Audio Guidance:</strong> Hear responses in your native language explaining what to do next.
+            </li>
+        </ul>
+        <img src="https://cdn-icons-png.flaticon.com/512/483/483947.png" alt="Voice Feature" width="150px">
+    </section>
+    <section class="voice-input-section">
+        <h2>🎤 Speak Your Health Issue</h2>
+        <p>Select Language:</p>
+        <select id="language-select" class="language-dropdown">
+          <option value="te-IN">Telugu</option>
+          <option value="hi-IN">Hindi</option>
+        </select>
+        <p>Click the mic button and speak:</p>
+        <button id="mic-btn" class="mic-button">🎙 Start Speaking</button>
+        <p id="user-speech-text" class="speech-text">Your speech will appear here...</p>
+        <button id="play-response-btn" class="tts-button" disabled>🔊 Play Response in Your Language</button>
+      </section>
+
+      
+      <script src="script.js"></script>
+      
+
+</body>
+
+</html>

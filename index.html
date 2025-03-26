@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navigation Header</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="nav-header">
+    <div class="logo-container">
+      Doctor Ai
+    </div>
+    <nav class="nav-menu">
+      <a href="#" class="nav-item">Home</a>
+      <a href="#" class="nav-item">About</a>
+      <a href="#" class="nav-item">Services</a>
+      <a href="#" class="nav-item">Experts </a>
+      <a href="donate.html">Donate</a>
+      <select id="languageSelector" onchange="changeLanguage()">
+        <option value="en">English</option>
+        <option value="te">తెలుగు (Telugu)</option>
+        <option value="hi">हिंदी (Hindi)</option>
+      </select>
+    </nav>
+    <div class="google">
+      <a id="google-login" href="#">
+        Login with Google
+      </a>
+    </div>
+    
+    <script>
+      fetch('http://localhost:3000/auth/google/url') // ✅ Use the backend port where your server.js is running
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById('google-login').href = data.url;
+        })
+        .catch(err => console.error('Failed to load Google login URL:', err));
+    </script>
+    
+
+    
+
+
+
+  </div>
+  <div class="container">
+    <header class="header">
+      <span class="badge">Your Personal Health Assistant</span>
+      <h1>Get Instant Medical Advice <span class="highlight">With AI Doctor</span></h1>
+      <p>An intelligent platform that helps you get health insights, quick symptom analysis, and connects you to experts
+        — all in one place.</p>
+      <div class="arrow-down">↓</div>
+    </header>
+
+    <main>
+      <div class="gallery-container">
+        <button id="prev" class="side-control left-control">&lt;</button>
+
+        <div class="image-scroll-container">
+          <div class="image-track" id="imageTrack">
+            <!-- Images will be added here by JavaScript -->
+          </div>
+        </div>
+
+        <button id="next" class="side-control right-control">&gt;</button>
+
+        <div class="indicators" id="indicators">
+          <!-- Indicators will be added here by JavaScript -->
+        </div>
+      </div>
+    </main>
+  </div>
+  <section class="instant-appointment-section">
+    <div class="content-container">
+      <div class="appointment-text">
+        <h2>Instant appointment with doctors. <span class="highlight">Guaranteed.</span></h2>
+        <p>100,000 Verified Doctors</p>
+        <p>3M+ Patient Recommendations</p>
+        <p>25M Patients/year</p>
+        <a href="doctors.html" class="find-doctor-button">Find me the right doctor</a>
+      </div>
+      <div class="appointment-video">
+        <video autoplay muted loop playsinline>
+          <source src="assests/gdg_hck_video - Made with Clipchamp_1742754174475.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="consult">
+    <div class="consult-container">
+      <div class="text">Consult top doctors online for any health concern</div>
+      <div class="text2">Private online consultations with verified doctors in all specialists</div>
+    </div>
+  </section>
+  <section class="cards">
+    <div class="card">
+
+      <div class="card-conatiner">
+        <img src="https://www.practostatic.com/consult/consult-home/symptoms_icon/Acne.png" alt="" width="90px">
+        <div class="consult"> Acne, pimple or skin issues</div>
+      </div>
+      <a href="consult.html"
+        style="display:inline-block; text-align:center; padding: 12px; cursor: pointer; margin-top: 2px; background-color: red; color: white; border-radius:12px; text-decoration: none;">Consult
+        Now</a>
+
+    </div>
+    <div class="card">
+      <div class="card-conatiner">
+        <img src="assests/CVD-iStock-1266230179.jpg" alt="" width="155px"
+          style="border-radius:none; mix-blend-mode: multiply;">
+        <div class="consult">Cardiovascular disease</div>
+      </div>
+      <a href="consult.html"
+        style="display:inline-block; text-align:center; padding: 12px; cursor: pointer; margin-top: 2px; background-color: red; color: white; border-radius:12px; text-decoration: none;">Consult
+        Now</a>
+
+    </div>
+    <div class="card">
+      <div class="card-conatiner">
+        <img src="assests/images.jpeg" alt="" width="100px" style="border-radius:none;  mix-blend-mode: multiply;">
+        <div class="consult"> Mentall Illness</div>
+      </div>
+      <a href="consult.html"
+        style="display:inline-block; text-align:center; padding: 12px; cursor: pointer; margin-top: 2px; background-color: red; color: white; border-radius:12px; text-decoration: none;">Consult
+        Now</a>
+
+    </div>
+    <div class="card">
+      <div class="card-conatiner">
+        <img src="assests/images (1).jpeg" alt="" width="70px" height="90px" style=" mix-blend-mode: multiply;">
+        <div class="consult"> Acne, pimple or skin issues</div>
+      </div>
+      <a href="consult.html"
+        style="display:inline-block; text-align:center; padding: 12px; cursor: pointer; margin-top: 2px; background-color: red; color: white; border-radius:12px; text-decoration: none;">Consult
+        Now</a>
+
+    </div>
+    <div class="card">
+      <div class="card-conatiner">
+        <img src="assests/CVD-iStock-1266230179.jpg" alt="" width="155px">
+        <div class="consult"> Acne, pimple or skin issues</div>
+      </div>
+      <a href="consult.html"
+        style="display:inline-block; text-align:center; padding: 12px; cursor: pointer; margin-top: 2px; background-color: red; color: white; border-radius:12px; text-decoration: none;">Consult
+        Now</a>
+
+    </div>
+
+    <div class="express">
+      <h2>Express Your Health Issue in Your Own Language</h2>
+      <p>Use our voice feature to describe your symptoms easily in Telugu, Hindi, or English — and get quick AI analysis
+        with recommendations.</p>
+      <div class="button">
+        <a href="voice.html">
+          <button class="center">🎤 Start Speaking Now</button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>

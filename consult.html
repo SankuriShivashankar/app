@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consult with a Doctor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            display: flex;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .form-section {
+            margin-right: 40px;
+        }
+        .form-section h2 {
+            margin-bottom: 20px;
+        }
+        .form-section input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .image-section {
+            text-align: center;
+        }
+        .image-section img {
+            width: 100px;
+        }
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="form-section">
+        <h2>Consult with a Doctor</h2>
+        <label>Speciality</label>
+        <select>
+            <option>General Physician - ₹399</option>
+        </select>
+        <label>Patient name</label>
+        <input type="text" placeholder="Enter patient name for prescriptions">
+        <label>Mobile number</label>
+        <input type="text" placeholder="Enter mobile number">
+        <small>A verification code will be sent to this number.</small>
+        <button>Continue</button>
+        <a href="index.html" class="back-link">← Go to Home Page</a>
+    </div>
+    <div class="image-section">
+        <img src="https://cdn-icons-png.flaticon.com/512/387/387561.png" alt="Verified Doctor">
+        <p>Verified Doctors</p>
+    </div>
+</div>
+</body>
+</html>
