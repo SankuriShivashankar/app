@@ -212,3 +212,4 @@ micBtn.addEventListener('click', () => {
     userSpeechText.innerText = `Error: ${event.error}`;
   };
 });
+

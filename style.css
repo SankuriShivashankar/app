@@ -201,7 +201,7 @@ body {
   background-image: linear-gradient(to right, #2563eb, rgba(37, 99, 235, 0.7));
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
+  color: blue;
   font-weight: normal;
 }
 

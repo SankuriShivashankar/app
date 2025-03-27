@@ -103,3 +103,7 @@ body {
 .load {
     filter: drop-shadow(2px 2px 10px black);
 }
+
+#send-btn img {
+    filter: invert(1);
+}

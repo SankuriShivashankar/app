@@ -21,13 +21,8 @@
       <a href="index.html" class="nav-item">Home</a>
       <a href="about.html">about</a>
       <a href="services.html">services</a>
-      <a href="#" class="nav-item">Experts </a>
       <a href="donate.html">Donate</a>
-      <select id="languageSelector" onchange="changeLanguage()">
-        <option value="en">English</option>
-        <option value="te">తెలుగు (Telugu)</option>
-        <option value="hi">हिंदी (Hindi)</option>
-      </select>
+      <a href="chatbot.html">Ai-chatBot</a>
     </nav>
     <div class="google">
       <a id="google-login" href="https://accounts.google.com/o/oauth2/v2/auth?client_id=148963722800-bo3kqjtanp24kebl9ahe98ujp6adnbm8.apps.googleusercontent.com&redirect_uri=http://localhost:3000/auth/callback&response_type=code&scope=openid%20email%20profile&access_type=offline&prompt=consent">
@@ -36,7 +31,7 @@
     </div>
 
     <script>
-      fetch('http://localhost:3000/auth/google/url') // ✅ Use the backend port where your server.js is running
+      fetch('http://localhost:3000/auth/google/url') 
         .then(res => res.json())
         .then(data => {
           document.getElementById('google-login').href = data.url;
@@ -47,12 +42,12 @@
   <div class="container">
     <header class="header">
       <span class="badge">Your Personal Health Assistant</span>
-      <h1>Get Instant Medical Advice <div>with</div>
+      <h1 style="color: rgb(252, 15, 23);">Get Instant Medical Advice <div>with</div>
           <span class="highlight">
           <span>Instant appointment with doctors.</span>
           <span>Consult top doctors</span>
           <span>medical-chatbot</span>
-          <span>Speak Your Health Issue</span> <!-- To loop back smoothly -->
+          <span>Speak Your Health Issue</span> 
         </span>
       </h1>
 
@@ -68,14 +63,14 @@
 
         <div class="image-scroll-container">
           <div class="image-track" id="imageTrack">
-            <!-- Images will be added here by JavaScript -->
+            
           </div>
         </div>
 
         <button id="next" class="side-control right-control">&gt;</button>
 
         <div class="indicators" id="indicators">
-          <!-- Indicators will be added here by JavaScript -->
+          
         </div>
       </div>
     </main>
@@ -231,6 +226,59 @@
     </div>
    </div>
   </section>
+<body class="bg-gray-100 text-gray-800">
+    <div class="container mx-auto text-center py-16 px-4">
+        <div class="flex justify-center items-center mb-4">
+            <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">NEW</span>
+            <p class="text-sm">Medical Chat stands out as the most accurate medical question-answering system based on both USMLE and MedQA performance evaluation</p>
+        </div>
+        <h1 class="text-5xl font-bold text-blue-700 mb-4">Medical Chat</h1>
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Advanced AI Assistant For <span class="text-gradient bg-gradient-to-r from-yellow-400 via-red-500 to-purple-500">Human/Veterinary</span> Healthcare</h2>
+        <p class="text-lg text-gray-600 mb-8">Get instant human/veterinary medical answers for treatment, patient education and drugs</p>
+        <div class="flex justify-center space-x-4">
+          <a href="chatbot.html">
+              <button class="bg-gradient-to-r from-yellow-400 via-red-500 to-purple-500 text-white font-bold py-2 px-4 rounded">
+                  Medical Chatbot
+              </button>
+          </a>
+      </div>
+      
+    </div>
+</body>
+<footer class="bg-gray-900 text-white py-6">
+  <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-wrap justify-between items-center">
+          <!-- Logo / Brand Name -->
+          <div>
+              <h2 class="text-xl font-bold">AI Medical Chatbot</h2>
+              <p class="text-sm text-gray-400">Bridging the gap in healthcare with AI.</p>
+          </div>
+
+          <!-- Navigation Links -->
+          <div class="flex space-x-6">
+              <a href="about.html" class="text-gray-300 hover:text-white">About</a>
+              <a href="services.html" class="text-gray-300 hover:text-white">Services</a>
+              <a href="consult.html" class="text-gray-300 hover:text-white">Contact</a>
+              <a href="" class="text-gray-300 hover:text-white">Privacy Policy</a>
+          </div>
+      </div>
+
+      <!-- Divider -->
+      <hr class="border-gray-700 my-4">
+
+      <!-- Copyright & Social Links -->
+      <div class="flex flex-wrap justify-between items-center">
+          <p class="text-gray-400 text-sm">&copy; 2025 AI Medical Chatbot. All rights reserved.</p>
+          
+          <div class="flex space-x-4">
+              <a href="https://github.com/SankuriShivashankar/app" class="text-gray-400 hover:text-white" target="_blank">GitHub</a>
+              <a href="https://www.linkedin.com/in/sankuri-shivashankar9848660106?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-gray-400 hover:text-white" target="_blank">LinkedIn</a>
+              <a href="sankurishivashankar90@gmail.com" class="text-gray-400 hover:text-white">Email</a>
+          </div>
+      </div>
+  </div>
+</footer>
+
 
 <script src="script.js"></script>
 
