@@ -108,6 +108,30 @@
       font-size: 0.75rem;
     }
   }
+
+  .highlight {
+    display: inline-block;
+    overflow: hidden;
+    height: 1.2em; /* Adjusted to fit text properly */
+    vertical-align: bottom;
+    position: relative;
+   
+  }
+  
+  .highlight span {
+    color: rgb(36, 19, 19);
+    display: block;
+    animation: animate 6s infinite ease-in-out;
+    transition: transform 0.8s ease-in-out; /* Smooth transition */
+  }
+  
+  @keyframes animate {
+    0%, 20% { transform: translateY(0%); }
+    25%, 45% { transform: translateY(-100%); }
+    50%, 70% { transform: translateY(-200%); }
+    75%, 95% { transform: translateY(-300%); }
+    100% { transform: translateY(0%); }
+  }
   
 /* Base styles */
 * {
@@ -638,3 +662,4 @@ footer {
 .google > a:hover{
   color: green;
 }
+

@@ -10,23 +10,23 @@ document.addEventListener('DOMContentLoaded', function() {
         alt: "Abstract shape"
       },
       {
-        src: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?q=80&w=1964&auto=format&fit=crop",
-        alt: "Clean architecture"
+        src: "assests/Screenshot 2025-03-27 174700.png",
+        alt: "dff"
       },
       {
-        src: "https://images.unsplash.com/photo-1488554378835-f7acf46e6c98?q=80&w=1771&auto=format&fit=crop",
+        src: "assests/Screenshot 2025-03-27 175330.png",
         alt: "Minimalist interior"
       },
       {
-        src: "https://images.unsplash.com/photo-1603803721487-57b3b6184398?q=80&w=1964&auto=format&fit=crop",
+        src: "assests/Screenshot 2025-03-27 180044.png",
         alt: "Geometric design"
       },
       {
-        src: "https://images.unsplash.com/photo-1581650787594-8621264cf8db?q=80&w=1771&auto=format&fit=crop",
+        src: "assests/Screenshot 2025-03-27 180421.png",
         alt: "Modern furniture"
       },
       {
-        src: "https://images.unsplash.com/photo-1499678329028-101435549a4e?q=80&w=1770&auto=format&fit=crop",
+        src: "assests/Screenshot 2025-03-27 180709.png",
         alt: "Minimalist beach"
       }
     ];

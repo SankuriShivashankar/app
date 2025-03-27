@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Navigation Header</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
 </head>
 
 <body>
@@ -14,9 +18,9 @@
       Doctor Ai
     </div>
     <nav class="nav-menu">
-      <a href="#" class="nav-item">Home</a>
-      <a href="#" class="nav-item">About</a>
-      <a href="#" class="nav-item">Services</a>
+      <a href="index.html" class="nav-item">Home</a>
+      <a href="about.html">about</a>
+      <a href="services.html">services</a>
       <a href="#" class="nav-item">Experts </a>
       <a href="donate.html">Donate</a>
       <select id="languageSelector" onchange="changeLanguage()">
@@ -26,11 +30,11 @@
       </select>
     </nav>
     <div class="google">
-      <a id="google-login" href="#">
+      <a id="google-login" href="https://accounts.google.com/o/oauth2/v2/auth?client_id=148963722800-bo3kqjtanp24kebl9ahe98ujp6adnbm8.apps.googleusercontent.com&redirect_uri=http://localhost:3000/auth/callback&response_type=code&scope=openid%20email%20profile&access_type=offline&prompt=consent">
         Login with Google
       </a>
     </div>
-    
+
     <script>
       fetch('http://localhost:3000/auth/google/url') // ✅ Use the backend port where your server.js is running
         .then(res => res.json())
@@ -39,17 +43,20 @@
         })
         .catch(err => console.error('Failed to load Google login URL:', err));
     </script>
-    
-
-    
-
-
-
   </div>
   <div class="container">
     <header class="header">
       <span class="badge">Your Personal Health Assistant</span>
-      <h1>Get Instant Medical Advice <span class="highlight">With AI Doctor</span></h1>
+      <h1>Get Instant Medical Advice <div>with</div>
+          <span class="highlight">
+          <span>Instant appointment with doctors.</span>
+          <span>Consult top doctors</span>
+          <span>medical-chatbot</span>
+          <span>Speak Your Health Issue</span> <!-- To loop back smoothly -->
+        </span>
+      </h1>
+
+
       <p>An intelligent platform that helps you get health insights, quick symptom analysis, and connects you to experts
         — all in one place.</p>
       <div class="arrow-down">↓</div>
@@ -165,11 +172,75 @@
     </div>
   </section>
 
+ <body class="font-roboto bg-white text-gray-800">
+  <section class="text-center py-12">
+   <div class="container mx-auto">
+    <div class="mb-6">
+      <a href="services.html" class="bg-red-500 text-white py-2 px-4 rounded-full text-sm font-bold inline-block text-center">
+        Click to View Services
+      </a>
+    </div>
+    
+    <h1 class="text-3xl font-bold mb-4">
+     Choose Us As Your Most Trusted Health Partner For Life
+    </h1>
+    <div class="flex justify-center mb-4">
+     <div class="w-16 h-1 bg-blue-500 rounded-full">
+     </div>
+    </div>
+    <p class="text-gray-600 mb-12">
+     We provide highly effective homeopathic treatment for a wide range of chronic diseases. Our approach addresses the root cause of ailments, promoting long-lasting healing.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+     <div class="bg-white shadow-lg rounded-lg p-6">
+      <img alt="Home icon" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/H1Dnd2aTNiLloEkMaNEjM_IM3EfdoGHTrkllRjhf_Cw.jpg" width="100"/>
+      <h2 class="text-xl font-bold text-blue-600">
+       No hospitalization needed
+      </h2>
+     </div>
+     <div class="bg-white shadow-lg rounded-lg p-6">
+      <img alt="Stethoscope icon" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/8lfa0Bl-3V_37jehC0k5W-zanRRr0a6Xa45g5MzC4tM.jpg" width="100"/>
+      <h2 class="text-xl font-bold text-blue-600">
+       No surgical Intervention
+      </h2>
+     </div>
+     <div class="bg-white shadow-lg rounded-lg p-6">
+      <img alt="Doctor icon" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/bc8ACW0djN3VtInoVnfHBYpRuvrECurikbU_tw3_rDY.jpg" width="100"/>
+      <h2 class="text-xl font-bold text-blue-600">
+       Highly Experienced Homeopaths
+      </h2>
+     </div>
+     <div class="bg-white shadow-lg rounded-lg p-6">
+      <img alt="Safe icon" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/yS25E3zseqcSIkeRP3RL1pYFNn2dDCymoFDNwqaGiiM.jpg" width="100"/>
+      <h2 class="text-xl font-bold text-blue-600">
+       100% safe &amp; no side effects
+      </h2>
+     </div>
+     <div class="bg-white shadow-lg rounded-lg p-6">
+      <img alt="Treatment icon" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/HZEJrI3zI1OfYhkf8aqkyzi4djJyLmX0oN1YrriUz6Y.jpg" width="100"/>
+      <h2 class="text-xl font-bold text-blue-600">
+       Constitutional treatments
+      </h2>
+     </div>
+     <div class="bg-white shadow-lg rounded-lg p-6">
+      <img alt="Price icon" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/YLNvdfF3rs-ThRLqyo74_xyodY_FCQGSG6aoU_hubUA.jpg" width="100"/>
+      <h2 class="text-xl font-bold text-blue-600">
+       Guaranteed Best Prices
+      </h2>
+     </div>
+    </div>
+   </div>
+  </section>
+
+<script src="script.js"></script>
 
 
 
 
-  <script src="script.js"></script>
+
+
+
+  
 
 
 </body>
