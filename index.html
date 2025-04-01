@@ -160,9 +160,7 @@
       <p>Use our voice feature to describe your symptoms easily in Telugu, Hindi, or English — and get quick AI analysis
         with recommendations.</p>
       <div class="button">
-        <a href="voice.html">
-          <button class="center">🎤 Start Speaking Now</button>
-        </a>
+        <button class="center" onclick="startVoiceAssistant()">🎤 Start Speaking Now</button>
       </div>
     </div>
   </section>
@@ -281,16 +279,39 @@
 
 
 <script src="script.js"></script>
+<script>
+    function startSpeaking() {
+        const userInput = prompt("Enter your speech input:"); // Replace with actual speech recognition logic
+        fetch('/process-speech', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ text: userInput }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(`AI Response: ${data.response}`);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
 
-
-
-
-
-
-
-  
-
-
+    function startVoiceAssistant() {
+        fetch('http://localhost:5000/start-voice-ui', { method: 'POST' })
+            .then(response => {
+                if (response.ok) {
+                    alert('Voice Assistant is starting...');
+                } else {
+                    alert('Failed to start Voice Assistant.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+</script>
 </body>
 
 </html>
